@@ -63,6 +63,7 @@
     <script defer src="/static/js/slide.js"></script>
     <script defer src="/static/js/backtotop.js"></script>
     <script defer src="/static/js/display.js"></script>
+    <script defer src="/static/js/popup.js"></script>
 
 
 
@@ -73,7 +74,7 @@
         <div class="header">
             <div class="row">
                 <div class="header_menu">
-                  <a href="#pop1" class="loginBtn">Login</a>
+                    <a href="#pop1" class="loginBtn">Login</a>
                 </div>
             </div>
         </div>
@@ -93,9 +94,9 @@
             </div>
         </div>
     </section>
-   
 
-    
+
+
 
     <div class="inner">
         <section class="section section--second">
@@ -107,10 +108,10 @@
                         <!-- <div class="slide-prev"><img src="../image/left.png" width="35px" height="35px" onmouseover="this.src='/image/left-dark.png'" onmouseout="this.src='/image/left.png'"></div>
                         <div class="slide-next"><img src="../image/right.png" width="35px" height="35px" onmouseover="this.src='/image/right-dark.png'" onmouseout="this.src='/image/right.png'"></div> -->
                         <img class="slide-prev" src="../static/image/left.png" width="35px" height="35px"
-                            onmouseover="this.src='/static/image/left-dark.png'" 
+                            onmouseover="this.src='/static/image/left-dark.png'"
                             onmouseout="this.src='/static/image/left.png'">
                         <img class="slide-next" src="../static/image/right.png" width="35px" height="35px"
-                            onmouseover="this.src='/static/image/right-dark.png'" 
+                            onmouseover="this.src='/static/image/right-dark.png'"
                             onmouseout="this.src='/static/image/right.png'">
                     </div>
                 </div>
@@ -177,7 +178,7 @@
                                 200 공백제외 145)
                             </div>
                         </div>
-                    </li> 
+                    </li>
                     <li class="qna-showcard qna-showcard-6">
                         <div class="show-question-container">
                             <div class="show-question-text">Q6<br>질문입니다.</div>
@@ -317,13 +318,34 @@
 
 
 
-         <!-- login popup창 만들기 -->
-         <div class="login-popup" id="pop1">
-            <a href="#">닫기</a>
+    <!-- login popup창 만들기 -->
+    <div class="login-popup" id="pop1">
+        <div class="login-title">LOGIN</div>
+        <hr id="hr1">
+        <div class="login-container id-container">
+            <img src="../static/image/id.png">
+            <div class="outBox id-outbox">
+                <div class="inputBox id-inputbox">
+                    <input type="text" id="id" name="">
+                    <label for="id">ID</label>
+                </div>
+            </div>
         </div>
-        <div class="dim">
+        <div class="login-container pw-container">
+            <img src="../static/image/pw.png">
+            <div class="outBox pw-outbox">
+                <div class="inputBox pw-inputbox">
+                    <input type="text" id="pw" name="">
+                    <label for="pw">PASSWORD</label>
+                </div>
+            </div>
         </div>
-    
+        <a href="#" id="exit-loginbox">X</a>
+
+    </div>
+    <div class="dim">
+    </div>
+
 
 </body>
 
