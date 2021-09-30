@@ -9,8 +9,8 @@ let qnaBox = document.querySelector(".qna-showlist");
 let card = document.querySelectorAll(".qna-showlist li");
 let currentIndex = 0;
 let cardCount = card.length;
-let cardWidth = 330;
-let cardMargin = 20;
+let cardWidth = 340;
+let cardMargin = 40;
 
 makeClone();
 
@@ -26,6 +26,7 @@ function makeClone() {
         qnaBox.prepend(cloneCard);
     }
     updateWidth();
+    setInitialPos();
 }
 
 function updateWidth() {
@@ -36,7 +37,11 @@ function updateWidth() {
     qnaBox.style.width = newWidth;
 }
 
+function setInitialPos() {
+    var initialTranslateValue = -(cardWidth + cardMargin)*cardCount;
+    qnaBox.style.transform = 'translateX(' + initialTranslateValue+'px)';
 
+}
 
 //이전 버전
 // qnaBox.style.width = (cardWidth + cardMargin) * cardCount - cardMargin + 'px';

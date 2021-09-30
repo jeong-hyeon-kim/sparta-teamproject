@@ -350,13 +350,16 @@ a {
 
 
   .qna-showcard {
-      width: 330px;
+      width: 340px;
       height: 500px;
       box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.3);
       border-radius: 8px;
-      margin: 0px 20px;
       overflow: hidden;
       flex-shrink: 0;
+  }
+
+  .qna-showcard:not(:last-child) {
+      margin-right: 40px;
   }
 
   .qna-showcard:hover {
