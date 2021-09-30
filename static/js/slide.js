@@ -27,6 +27,10 @@ function makeClone() {
     }
     updateWidth();
     setInitialPos();
+    setTimeout(function(){
+        qnaBox.classList.add('animated');
+    },100)
+    
 }
 
 function updateWidth() {
@@ -41,6 +45,33 @@ function setInitialPos() {
     var initialTranslateValue = -(cardWidth + cardMargin)*cardCount;
     qnaBox.style.transform = 'translateX(' + initialTranslateValue+'px)';
 
+}
+
+slideNext.addEventListener('click', function(){
+    moveSlide(currentIndex + 1)
+})
+
+slidePrev.addEventListener('click', function(){
+    moveSlide(currentIndex - 1)
+})
+
+function moveSlide(num) {
+    qnaBox.style.left = -num * (cardWidth + cardMargin) + 'px';
+    currentIndex = num;
+    console.log(currentIndex, cardCount);
+    if (currentIndex == cardCount || currentIndex == -cardCount) {
+        setTimeout(function(){
+            qnaBox.classList.remove('animated');
+            qnaBox.style.left = '0px';
+            currentIndex = 0;
+        },500);
+        setTimeout(function(){
+            qnaBox.classList.add('animated');
+
+        },600)
+
+        
+    }
 }
 
 //이전 버전

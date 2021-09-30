@@ -345,7 +345,12 @@ a {
       position: relative;
       margin: 0 0 0 0;
       overflow: hidden;
-      transition: 1.3s;
+      /* transition: 1.3s; */
+
+  }
+
+  .qna-showlist.animated {
+      transition: 0.5s ease-out;
   }
 
 
