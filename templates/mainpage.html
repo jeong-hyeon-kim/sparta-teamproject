@@ -302,37 +302,45 @@
         <div class="footer">
             <p> "?"(QUESTION) BY SPARTACODINGCLUB 15일 프로젝트 챌린지 TEAM 3 빡코 </p>
             <p> copyrightⓒ2021 빡코 All rights reserved </p>
+            <img class=collaboration src="/static/image/collaboration.png">
         </div>
     </footer>
 
     <!-- login popup창 만들기 -->
     <div class="login-popup" id="pop1">
-        <div class="login-title">LOGIN</div>
-        <hr id="hr1">
-        <div class="login-container id-container">
-            <img src="../static/image/id.png">
-            <div class="outBox id-outbox">
-                <div class="inputBox id-inputbox">
-                    <input type="text" id="id" name="">
-                    <label for="id">ID</label>
+        <div class="login-title">logo넣기</div>
+        <hr id="login_hr1">
+        <div class="login-container">
+            <div class="login-container_input">
+                <div class="login-container_input_id">
+                    <img src="../static/image/id.png">
+                    <div class="outBox id-outbox">
+                        <div class="inputBox id-inputbox">
+                            <input type="text" id="id" name="">
+                            <label for="id">ID</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-container_input_pw">
+                    <img src="../static/image/pw.png">
+                    <div class="outBox pw-outbox">
+                        <div class="inputBox pw-inputbox">
+                            <input type="password" id="pw" name="">
+                            <label for="pw">PASSWORD</label>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="login-container_btn">LOGIN</div>
         </div>
-        <div class="login-container pw-container">
-            <img src="../static/image/pw.png">
-            <div class="outBox pw-outbox">
-                <div class="inputBox pw-inputbox">
-                    <input type="text" id="pw" name="">
-                    <label for="pw">PASSWORD</label>
-                </div>
-            </div>
-        </div>
-        <div class="login-btn">login</div>
+        
         <div class="other-option">
             <a href="#" class="other-option_forgot">아이디/비밀번호 찾기</a>
             <a href="#" class="other-option_signin">회원가입하기</a>
         </div>
         <a href="#" id="exit-loginbox">X</a>
+    </div>
+
 
     </div>
     <div class="dim">
