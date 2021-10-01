@@ -76,8 +76,8 @@ a {
 
 /* 로그인 팝업 */
 .login-popup {
-    width: 550px;
-    height: 330px;
+    width: 30%;
+    height: 45%;
     border-radius: 7px;
     background-color: #fff;
     border: none;
@@ -85,9 +85,10 @@ a {
     padding: 20px;
     position: fixed;
     z-index: 999;
-    left: 31%;
+    display: flex;
+    left: 35%;
     top: 30%;
-    translate:(-50%, -50%);
+    /*translate:(-50%, -50%); */
     visibility: hidden;
     transition: all 0.4s;
 }   
@@ -119,9 +120,9 @@ a {
 
 /* inputbox에 대한 효과 */
 .outBox {
-    margin:15px auto; 
+    /* margin:15px auto;  */
     padding:0px; 
-    max-width:320px; 
+    max-width:600px; 
     border:none; 
     border-radius:6px;
     display: inline-block;
@@ -130,26 +131,30 @@ a {
 .outBox .inputBox {
     position:relative; 
     height:50px;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 .outBox .inputBox input[type="text"] {
     padding:0 10px; 
     width:100%; 
-    height:50px; 
+    height:40px; 
     font-size:14px; 
     box-sizing:border-box; 
     border:1px solid #999; 
     outline:none;
+    display: inline-block;
 }
 
 .outBox .inputBox input[type="password"] {
     padding:0 10px; 
     width:100%; 
-    height:50px; 
+    height:40px; 
     font-size:14px; 
     box-sizing:border-box; 
     border:1px solid #999; 
     outline:none;
+    display: inline-block;
 }
 
 .outBox .inputBox label {
@@ -186,19 +191,61 @@ a {
      transform:scale(.85) translate(-10px, -48px);
     }
 
-.login-container {
-  display: flex;
-  margin: auto;
+
+.login-wrap {
+    position: relative;
+    margin: 0 auto;
+}
+
+.login-wrap2 {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
 }
 
 .login-container_input {
+  display: block;
+  position: absolute;
+  align-items: center;
+
+}
+
+
+.login-container_input_id {
+    line-height: 100%;
+    align-items: center;
+}
+
+.login-container_input_id img {
+    width: 30px;
+    transform: translateY(10px);
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.login-container_input_pw img {
+    width: 30px;
+    transform: translateY(10px);
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.login-btn {
+    width: 100px;
+    height: 60px;
     display: block;
 }
 
+
+/* 
 .login-container_btn {
-    display: flex;
-    width: 138px;
-    height: 138px;
+    display: block;
+    position: relative;
+    justify-content: center;
+    width: 80px;
+    height: 50px;
     border-radius: 8px;
     background-color: #ff3300;
     color: #ffffff;
@@ -209,11 +256,14 @@ a {
     cursor: pointer;
     box-shadow:  
     0 0 0 100px rgba(0,0,0,0.1) inset;
+} */
+
+.other-option {
+    bottom: 10px;
+    text-align: center;
 }
 
-
 .other-option a {
-    margin-left: 30px;
     color: darkgray;
 }
 
@@ -225,28 +275,38 @@ a {
 #exit-loginbox {
     display: block;
     position: absolute;
-    right: 1rem;
-    top: 1rem;
-    font-size: 30px;
-    font-weight: 900;
+    right: 7px;
+    top: 7px;
+    font-size: 18px;
+    font-weight: 800;
     text-decoration: none;
-    color: darkgray;
+    color: #fff;
+    background-color: lightgray;
+    padding: 0px 8px 5px 7px;
+    border-radius: 50%;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 #exit-loginbox:hover {
-    color: black;
+    background-color: black;
 }
 
 .login-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 40px;
-    margin-left: 20px;
     margin-bottom: 10px;
+    text-align: center;
+    color: darkgray;
 }
 
+ .login-title span {
+     font-size: 70px;
+     color: #000;
+ }
+
 #login_hr1 {
-    border: solid 2px;
-    color: #ff3300;
+    border: none;
+    color: #000;
     display: block;
 }
 
@@ -523,7 +583,7 @@ a {
     margin-top: 0px; 
     padding-bottom: 20px;
     position: relative;
-    padding-top: 40px;
+    padding-top: 55px;
 }
 
 
@@ -701,7 +761,29 @@ margin: 0 10px;
 
 /* 화면 너비 0 ~ 1024px */
 @media (max-width: 1024px) {
+
+.login-popup {
+    width: 50%;
+    height: 40%;
+    left: 25%;
+    top: 30%;
+    padding-top: 10px;
+   
 }
+
+.login-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.login-title span {
+    font-size: 35px;
+}
+}
+
+
+
 
 /* 화면 너비 0 ~ 980px */
 @media (max-width: 980px) {
@@ -767,9 +849,41 @@ margin: 0 10px;
         padding-top: 50px;
         padding-left: 60px;
     }
+    .login-popup {
+        width: 60%;
+        height: 56%;
+        left: 20%;
+        top: 22%;
+       
+    }
+
+    .login-title {
+        margin-top: 40px;
+        margin-bottom: 25px;
+        font-size: 30px;
+    }
+
+    .login-title span {
+        font-size: 50px;
+    }
+
 }
 @media (max-width: 480px) {
     .section_01 .Q_text {
         font-size: 18px;
+    }
+
+    .login-popup {
+        width: 80%;
+        height: 56%;
+        left: 10%;
+        top: 22%;
+       
+    }
+
+
+    .login-title {
+        margin-top: 50px;
+        margin-bottom: 30px;
     }
 }
